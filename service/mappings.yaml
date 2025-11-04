@@ -1,0 +1,8 @@
+# Image mappings for cloud providers
+
+ubuntu-22-small:
+  - provider: azure
+    image: ubuntu-22-04-x64
+    size: Standard_B1s
+    priority: 1
+    ttl: 3600

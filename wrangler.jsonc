@@ -1,0 +1,41 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "dployr-sandbox",
+  "account_id": "81602a8fc518f9542c732a96aa9018f2",
+  "main": "src/index.ts",
+  "compatibility_date": "2025-02-04",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "vars": {
+    "ENVIRONMENT": "production",
+    "BASE_URL": "https://dployr.dev",
+    "WEB_URL": "http://app.dployr.dev",
+    "SANDBOX_URL": "https://sandbox.dployr.dev",
+  },
+  "observability": {
+    "logs": {
+      "enabled": true
+    }
+  },
+  "kv_namespaces": [
+    {
+      "binding": "SANDBOX_KV",
+      "id": "c14041c3b2834eea81544dcf9f6ed654"
+    }
+  ],
+  "env": {
+    "production": {
+      "name": "dployr-sandbox",
+      "vars": {
+        "ENVIRONMENT": "production"
+      }
+    },
+    "staging": {
+      "name": "dployr-sandbox-staging",
+      "vars": {
+        "ENVIRONMENT": "staging"
+      }
+    }
+  }
+}
